@@ -1,8 +1,8 @@
 {
   "name": "Robin Winters public HTML reference",
-  "factApproval": "Supported work facts approved October 2, 2026; unresolved education and credentials omitted",
+  "factApproval": "Supported work facts approved October 2, 2026; NASM PBC attribution and wording approved October 3, 2026; unresolved academic qualifications omitted",
   "sourceRecord": "https://github.com/RobinWinters/RobinWinters/blob/Radpository/professional/professional-record.json",
-  "sourceCommit": "ff828458340a0375e85bcce8176379f5a5fe2da6",
+  "sourceCommit": "038117ba37fa56617dda27554fcbaa6e4ac44b73",
   "authorship": "Self-authored professional reference with editorial/coding-assistant support",
   "teachingExamples": "Separate educational artifacts; synthetic event fixtures; not private product source or customer deployments",
   "sourceFiles": [
@@ -17,5 +17,6 @@
     "AI citations",
     "ATS registration",
     "Independent verification"
-  ]
+  ],
+  "credentialEvidence": "https://credentials.nasm.org/1fbcae42-b595-4fc8-a1ad-ac09fdc542b4"
 }
