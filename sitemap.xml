@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://robinwinters.github.io/</loc>
     <lastmod>2026-10-02</lastmod>
@@ -19,30 +19,80 @@
   <url>
     <loc>https://robinwinters.github.io/writing/moderation.html</loc>
     <lastmod>2026-10-02</lastmod>
+    <image:image>
+      <image:loc>https://robinwinters.github.io/writing/images/moderation-1.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://robinwinters.github.io/writing/images/moderation-2.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://robinwinters.github.io/writing/distributed-kinematic-sensing.html</loc>
     <lastmod>2026-10-02</lastmod>
+    <image:image>
+      <image:loc>https://robinwinters.github.io/writing/images/distributed-kinematic-sensing-1.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://robinwinters.github.io/writing/images/distributed-kinematic-sensing-2.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://robinwinters.github.io/writing/images/distributed-kinematic-sensing-3.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://robinwinters.github.io/writing/images/distributed-kinematic-sensing-4.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://robinwinters.github.io/writing/images/distributed-kinematic-sensing-5.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://robinwinters.github.io/writing/kinematics-lab-part-ii.html</loc>
     <lastmod>2026-10-02</lastmod>
+    <image:image>
+      <image:loc>https://robinwinters.github.io/writing/images/kinematics-lab-part-ii-1.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://robinwinters.github.io/writing/images/kinematics-lab-part-ii-2.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://robinwinters.github.io/writing/images/kinematics-lab-part-ii-3.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://robinwinters.github.io/writing/ios-27-liquid-glass.html</loc>
     <lastmod>2026-10-02</lastmod>
+    <image:image>
+      <image:loc>https://robinwinters.github.io/writing/images/ios-27-liquid-glass-1.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://robinwinters.github.io/writing/images/ios-27-liquid-glass-2.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://robinwinters.github.io/writing/what-if-myspace-had-it-right.html</loc>
     <lastmod>2026-10-02</lastmod>
+    <image:image>
+      <image:loc>https://robinwinters.github.io/writing/images/what-if-myspace-had-it-right-1.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://robinwinters.github.io/writing/images/what-if-myspace-had-it-right-2.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://robinwinters.github.io/writing/any-given-tuesday-ai-startups.html</loc>
     <lastmod>2026-10-02</lastmod>
+    <image:image>
+      <image:loc>https://robinwinters.github.io/writing/images/any-given-tuesday-ai-startups-1.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://robinwinters.github.io/writing/ai-chat-app-boundaries.html</loc>
     <lastmod>2026-10-02</lastmod>
+    <image:image>
+      <image:loc>https://robinwinters.github.io/writing/images/ai-chat-app-boundaries-1.png</image:loc>
+    </image:image>
   </url>
-<url><loc>https://robinwinters.github.io/resume.pdf</loc></url>
+  <url>
+    <loc>https://robinwinters.github.io/resume.pdf</loc>
+  </url>
 </urlset>
