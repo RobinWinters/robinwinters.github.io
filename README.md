@@ -1,2 +1,11 @@
-# robinwinters.github.io
-Robin Winters — public professional reference and technical writing. Native iOS, applied AI and fitness technology; approved work history and linked evidence.
+# Robin Winters — public HTML professional reference
+
+Static HTML for a professional reference and technical writing under the existing GitHub account. It is separate from robin.ac and does not alter that site's appearance or interactions. All content is visible in initial HTML; there is no JavaScript, tracker, form, build service or external font dependency.
+
+The work record uses approved held titles, year-level dates, scoped responsibilities and project evidence. Education and additional credentials remain unresolved and omitted. Forward Deployed Engineer is a target role. Educational code/articles have coding-assistant support disclosed and remain distinct from private ShowFlex code or customer deployments.
+
+Source: [approved professional record](https://github.com/RobinWinters/RobinWinters/tree/Radpository/professional). The HTML writing editions link to public code and reflect the existing Markdown accounts. Article and Person structured data describe the visible pages; they are not hidden resume stuffing or instructions to models.
+
+Intended public URL: https://robinwinters.github.io/ . Publication, live rendering, indexing and AI retrieval are separate checks. Standard public GitHub Pages branch publishing, with `.nojekyll`, serves these static files; no custom domain is configured.
+
+Updated October 2, 2026. Self-authored professional reference prepared with editorial assistance.

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://robinwinters.github.io/writing/</id>
+  <title>Robin Winters: technical writing</title>
+  <updated>2026-10-03T03:40:09Z</updated>
+  <link rel="self" href="https://robinwinters.github.io/feed.atom" type="application/atom+xml" />
+  <link rel="alternate" href="https://robinwinters.github.io/writing/" />
+  <author>
+    <name>Robin Winters</name>
+    <uri>https://robin.ac/</uri>
+  </author>
+  <entry>
+    <id>https://www.linkedin.com/pulse/building-ios-moderation-layer-apple-foundation-models-robin-winters-ejl5f/</id>
+    <title>Building an iOS Moderation Layer with Apple Foundation Models framework and Firebase</title>
+    <updated>2026-10-03T03:40:09Z</updated>
+    <summary>Technical article describing a hybrid on-device and Firebase moderation architecture. Publication does not independently verify a deployment.</summary>
+    <link rel="alternate" href="https://www.linkedin.com/pulse/building-ios-moderation-layer-apple-foundation-models-robin-winters-ejl5f/" />
+  </entry>
+  <entry>
+    <id>https://www.linkedin.com/pulse/distributed-kinematic-sensing-exercise-intelligence-across-winters-ek3ec/</id>
+    <title>Distributed Kinematic Sensing and Exercise Intelligence Across Apple Fitness+, GymKit and HealthKit</title>
+    <updated>2026-10-03T03:40:09Z</updated>
+    <summary>Architecture proposal about coordinating Apple-device sensing and workout context. It does not establish a released sensing product or Apple endorsement.</summary>
+    <link rel="alternate" href="https://www.linkedin.com/pulse/distributed-kinematic-sensing-exercise-intelligence-across-winters-ek3ec/" />
+  </entry>
+  <entry>
+    <id>https://www.linkedin.com/pulse/kinematics-lab-part-ii-you-dont-need-another-robin-winters-lrybc/</id>
+    <title>Kinematics Lab Part II: You Don't Need Another...</title>
+    <updated>2026-10-03T03:40:09Z</updated>
+    <summary>Follow-up technical report discussing capture integrity, prototype limitations and device coordination. Experiments and results are author-reported, not independently reproduced.</summary>
+    <link rel="alternate" href="https://www.linkedin.com/pulse/kinematics-lab-part-ii-you-dont-need-another-robin-winters-lrybc/" />
+  </entry>
+  <entry>
+    <id>https://robinwinters.github.io/writing/swift-search-request-ownership.html</id>
+    <title>Swift search request ownership</title>
+    <updated>2026-10-03T03:40:09Z</updated>
+    <summary>Educational Swift concurrency example with seven passing macOS tests, prepared with coding-assistant support. Separate from private product code.</summary>
+    <link rel="alternate" href="https://robinwinters.github.io/writing/swift-search-request-ownership.html" />
+  </entry>
+  <entry>
+    <id>https://robinwinters.github.io/writing/fitness-event-data-contracts.html</id>
+    <title>Fitness event feeds: explicit dates, stable identity and visible conflicts</title>
+    <updated>2026-10-03T03:40:09Z</updated>
+    <summary>Educational Swift data-contract example with synthetic fixtures, conflict receipts and 12 passing macOS tests. Prepared with coding-assistant support; separate from private product code.</summary>
+    <link rel="alternate" href="https://robinwinters.github.io/writing/fitness-event-data-contracts.html" />
+  </entry>
+</feed>

@@ -1,0 +1,21 @@
+{
+  "name": "Robin Winters public HTML reference",
+  "factApproval": "Supported work facts approved October 2, 2026; unresolved education and credentials omitted",
+  "sourceRecord": "https://github.com/RobinWinters/RobinWinters/blob/Radpository/professional/professional-record.json",
+  "sourceCommit": "ff828458340a0375e85bcce8176379f5a5fe2da6",
+  "authorship": "Self-authored professional reference with editorial/coding-assistant support",
+  "teachingExamples": "Separate educational artifacts; synthetic event fixtures; not private product source or customer deployments",
+  "sourceFiles": [
+    "index.html",
+    "writing/index.html",
+    "writing/swift-search-request-ownership.html",
+    "writing/fitness-event-data-contracts.html"
+  ],
+  "canonicalPortfolio": "https://robin.ac/",
+  "publicationDoesNotEstablish": [
+    "Search indexing",
+    "AI citations",
+    "ATS registration",
+    "Independent verification"
+  ]
+}
