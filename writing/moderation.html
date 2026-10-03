@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Building an iOS Moderation Layer with Apple Foundation Models framework and Firebase — Robin Winters</title><meta name="description" content="Robin Winters on hybrid on-device text moderation with Apple Foundation Models and Firebase. Original April 2026 article, republished with images and code.">
+<link rel="canonical" href="https://robinwinters.github.io/writing/moderation.html"><link rel="stylesheet" href="/style.css"><link rel="alternate" type="application/atom+xml" title="Robin Winters: writing" href="/feed.atom">
+<meta property="og:type" content="article"><meta property="og:title" content="Building an iOS Moderation Layer with Apple Foundation Models framework and Firebase"><meta property="og:description" content="Robin Winters on hybrid on-device text moderation with Apple Foundation Models and Firebase. Original April 2026 article, republished with images and code."><meta property="og:url" content="https://robinwinters.github.io/writing/moderation.html"><meta property="og:image" content="https://robinwinters.github.io/writing/images/moderation-2.png"><meta name="twitter:card" content="summary_large_image"><meta property="article:published_time" content="2026-04-02">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://robin.ac/#person", "name": "Robin Winters", "url": "https://robin.ac/"}, {"@type": "WebPage", "@id": "https://robinwinters.github.io/writing/moderation.html#page", "url": "https://robinwinters.github.io/writing/moderation.html", "name": "Building an iOS Moderation Layer with Apple Foundation Models framework and Firebase", "about": {"@id": "https://robin.ac/#person"}}, {"@type": "BlogPosting", "headline": "Building an iOS Moderation Layer with Apple Foundation Models framework and Firebase", "datePublished": "2026-04-02", "dateModified": "2026-10-02", "author": {"@id": "https://robin.ac/#person"}, "mainEntityOfPage": "https://robinwinters.github.io/writing/moderation.html", "isBasedOn": "https://www.linkedin.com/pulse/building-ios-moderation-layer-apple-foundation-models-robin-winters-ejl5f/", "image": ["https://robinwinters.github.io/writing/images/moderation-1.png", "https://robinwinters.github.io/writing/images/moderation-2.png"], "inLanguage": "en", "isAccessibleForFree": true}]}</script></head>
+<body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="/">Robin Winters</a><nav aria-label="Main"><a href="/#work">Work</a><a href="/#projects">Projects</a><a href="/writing/">Writing</a><a href="/#resume">Resume</a><a href="https://robin.ac/">robin.ac ↗</a></nav></header>
+<main id="main"><article class="prose republished"><h1>Building an iOS Moderation Layer with Apple Foundation Models framework and Firebase</h1><p>By <a href="https://robin.ac/">Robin Winters</a></p><p class="note">First published April 2, 2026 on <a href="https://www.linkedin.com/pulse/building-ios-moderation-layer-apple-foundation-models-robin-winters-ejl5f/">LinkedIn</a>. Republished October 2, 2026 with original wording, images and captions. Technical observations and opinions retain their original context.</p>
+
+<img alt="&quot;YOU KNOW MARTIN THAT IT'S JUST GOING TO BE TAKEN DOWN AND YOU'LL BE BLOCKED FROM POSTING FOR THE NEXT 30 DAYS&quot;" decoding="async" loading="lazy" src="/writing/images/moderation-2.png"/>
+
+<figcaption>
+            "YOU KNOW MARTIN THAT IT'S JUST GOING TO BE TAKEN DOWN AND YOU'LL BE BLOCKED FROM POSTING FOR THE NEXT 30 DAYS"
+          </figcaption>
+<div class="article-body">
+
+
+<!-- -->
+<p>
+<!-- -->When building out a moderation layer in the Apple ecosystem we have a LOT of tools and guidance to help the process along so we as developers can make something both delightful and safe for the wide range of users we hope to reach. 
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->I build iOS native products in Swift and SwiftUI, so I care a lot about how a system behaves in hand. I also care about whether it holds up once users start poking at it in weird ways. Moderation is where those things meetup. A bad classifier or a vague rejection banner is a product bug, but users experience both as the same thing.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Below is how I've been going about building a new-ish moderation layer for iOS that can be applied basically anywhere it's needed with a few caveats.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->After messing about with a number of increasingly elaborate designs, I landed on a hybrid architecture where each side does a different job quite well:<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<ul><li><!-- -->Apple’s <a href="https://developer.apple.com/apple-intelligence/whats-new/"><!-- -->Foundation Models framework<!-- --></a> gives fast, private, on-device text classification and rewrite suggestions.<!-- --></li><li><a href="https://firebase.google.com/docs/functions/callable"><!-- -->Firebase callable functions<!-- --></a> for server authoritative decision paths with Auth, App Check, audit logs, and review hooks.<!-- --></li><li><!-- -->Cloud Storage triggers for handling media separately, because images and video are their own special form of pain.<!-- --></li></ul>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<strong><!-- -->Caveat:<!-- --></strong> The main constraint with Apple’s model is that it only runs on Apple Intelligence capable devices in supported regions and Apple explicitly tells developers to check availability before building around it. Their own guidance also says to make sure the experience still works when generative features aren’t available. I definitely don't want moderation to disappear because a user has an unsupported device, region, or language setup, but this should solve itself with time and broader adoption of more modern devices. 
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Sauce: <a href="https://developer.apple.com/videos/play/wwdc2025/286/"><!-- -->WWDC25 Foundation Models<!-- --></a><!-- -->, <a href="https://developer.apple.com/documentation/foundationmodels/systemlanguagemodel/availability-swift.enum"><!-- -->SystemLanguageModel availability<!-- --></a><!-- -->, <a href="https://developer.apple.com/design/human-interface-guidelines/generative-ai"><!-- -->Generative AI HIG<!-- --></a>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Here’s a fun little diagram for flowchart fans:<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- --><!-- -->
+
+<figure>
+<!-- -->
+
+
+<!-- -->
+<!-- --> <img alt="Article content" decoding="async" loading="lazy" src="/writing/images/moderation-1.png"/>
+
+
+<figcaption>
+<!-- -->Fun is a relative term. 
+</figcaption>
+</figure>
+
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->On the client side I’m using Apple’s model for text-only moderation signals before the content ever leaves the device. That gives me two preem properties right away. First, it's fast. Second, I can warn a user about obvious problems without dumping every draft to the backend.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Apple’s Foundation Models framework is a good fit for this b/c Apple positions it for tasks like extraction, summarization, and classification. Exactly the kind of narrow job I want on device.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Sauce: <a href="https://developer.apple.com/apple-intelligence/whats-new/"><!-- -->What’s New in Apple Intelligence<!-- --></a>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->The Swift side looks roughly like this:<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<pre><code><!---->import FoundationModels
+
+@Generable
+struct ModerationSignal {
+    @Guide(description: "One of: safe, harassment, self_harm, doxxing, spam, sexual_content, review")
+    var label: String
+
+    @Guide(description: "Confidence score from 0 to 100")
+    var confidence: Int
+
+    @Guide(description: "True if the text appears to include personal contact information")
+    var containsPII: Bool
+
+    @Guide(description: "Short user-facing suggestion if the content should be revised")
+    var userMessage: String
+}
+
+@MainActor
+func classifyDraft(_ text: String) async throws -&gt; ModerationSignal? {
+    let model = SystemLanguageModel.default
+    guard case .available = model.availability else {
+        return nil
+    }
+
+    let session = LanguageModelSession()
+    let response = try await session.respond(
+        to: "Classify this user-generated text for moderation: \(text)",
+        generating: ModerationSignal.self
+    )
+
+    return response.content
+} </code></pre>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->A couple of things I dig about this. The response is structured so I’m not parsing model soup. The feature is private by default, and when the model is unavailable the app still works. It just skips the preflight hint and sends the content to the server.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Apple’s model is great when it's there but I am not building a moderation system that only works for the best case device matrix. Once the user submits content, Firebase takes over. I’m using a callable function so the app sends the content, the local moderation signal if one exists, and the user’s auth context through a standard path. Firebase’s docs call out a useful detail here: callable functions automatically include Auth and App Check tokens when available, and App Check enforcement can be turned on serverside. 
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Sauce: <a href="https://firebase.google.com/docs/functions/callable"><!-- -->Callable functions<!-- --></a><!-- -->, <a href="https://firebase.google.com/docs/app-check/cloud-functions"><!-- -->App Check for Cloud Functions<!-- --></a>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->The server side looks more like infrastructure now. Cool beans.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<pre><code><!---->import { onCall, HttpsError } from "firebase-functions/v2/https";
+import { getFirestore } from "firebase-admin/firestore";
+
+const db = getFirestore();
+
+export const submitContent = onCall(
+  { region: "us-central1", enforceAppCheck: true },
+  async (request) =&gt; {
+    if (!request.auth) {
+      throw new HttpsError("unauthenticated", "Sign-in required");
+    }
+
+    const { body, localSignal } = request.data as {
+      body: string;
+      localSignal?: {
+        label?: string;
+        confidence?: number;
+        containsPII?: boolean;
+      };
+    };
+
+    const piiHit = /\b\d{3}[-.\s]?\d{3}[-.\s]?\d{4}\b/.test(body);
+    const urlCount = (body.match(/https?:\/\//g) ?? []).length;
+    const likelySpam = urlCount &gt; 2;
+
+    let action: "publish" | "review" | "block" = "publish";
+    let reason: string | null = null;
+
+    if (piiHit || localSignal?.containsPII) {
+      action = "block";
+      reason = "possible_pii";
+    } else if (likelySpam || localSignal?.label === "review") {
+      action = "review";
+      reason = "needs_review";
+    }
+
+    const ref = await db.collection("content").add({
+      uid: request.auth.uid,
+      body,
+      localSignal: localSignal ?? null,
+      action,
+      reason,
+      createdAt: Date.now(),
+    });
+
+    return { id: ref.id, action, reason };
+  }
+); </code></pre>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->This is where we get consistency. I can layer the review workflows around the model output instead of the model owning everything. I can also log the actual reason for a decision for later when somebody appeals or there's some over-moderation. Also, text and images fail in different ways. A Cloud Storage triggered function can pull the asset, hash it, run the heavier checks, and then write back a moderation state without blocking the client on every large upload. Firebase pushes Storage triggered processing as a standard use case. 
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Sauce: <a href="https://firebase.google.com/docs/functions/use-cases"><!-- -->Cloud Functions use cases<!-- --></a>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->A few outside examples:<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Reddit is a good example. It shows what "mature" moderation starts to look like over time. They have <a href="https://support.reddithelp.com/hc/en-us/articles/15484574206484-Automoderator"><!-- -->AutoModerator<!-- --></a><!-- -->, <a href="https://support.reddithelp.com/hc/en-us/articles/15484574845460-Safety-Filters"><!-- -->Safety Filters<!-- --></a><!-- -->, and a <a href="https://support.reddithelp.com/hc/en-us/articles/15484440494356-Moderation-Queue"><!-- -->moderation queue<!-- --></a><!-- -->. They also have a documented flow for <a href="https://support.reddithelp.com/hc/en-us/articles/213099246-How-do-I-report-abuse-of-the-report-system"><!-- -->abuse of the report system<!-- --></a><!-- -->.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->The Meta example is the <a href="https://www.oversightboard.com/decision/bun-0w49p93l/"><!-- -->breast cancer awareness case from the Oversight Board<!-- --></a><!-- -->. Automated nudity enforcement caught legitimate health content. If the moderation stack sees skin and loses its mind, the product starts punishing the people it is supposed to help.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->So the build has to stay narrow where it makes sense. On device Foundation Models for fast text preflight, Firebase Functions for final action, hard rules for obvious stuff, review queues for the ugly middle. Fallbacks for unsupported devices, and state driven UI so the user knows what happened.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Hopefully that made sense! Obviously this is just experimenting for now, but I think it's a good way to start thinking about how to layer moderation into whatever your building with Apple's Foundation Model framework. 
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Be excellent to each other, 
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->🤘Robin<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- --> 
+
+<!-- -->
+
+</div><p><a href="/writing/">All writing</a> · <a href="https://www.linkedin.com/pulse/building-ios-moderation-layer-apple-foundation-models-robin-winters-ejl5f/">Original LinkedIn edition</a></p></article></main><footer><p>Robin Winters · San Francisco · <a href="mailto:robin@showflex.pro">robin@showflex.pro</a></p><p>This is a self-authored professional reference, prepared with editorial assistance. Updated October 2, 2026. <a href="https://github.com/RobinWinters/robinwinters.github.io">Public source</a> · <a href="https://github.com/RobinWinters/RobinWinters/tree/Radpository/professional">Record and evidence</a></p></footer></body></html>

@@ -9,3 +9,7 @@ Source: [approved professional record](https://github.com/RobinWinters/RobinWint
 Intended public URL: https://robinwinters.github.io/ . Publication, live rendering, indexing and AI retrieval are separate checks. Standard public GitHub Pages branch publishing, with `.nojekyll`, serves these static files; no custom domain is configured.
 
 Updated October 2, 2026. Self-authored professional reference prepared with editorial assistance.
+
+## Original LinkedIn article editions
+
+Seven articles are republished with original text, source links, dates, captions and 16 locally stored image copies. Article metadata reflects visible attribution. Embedded videos link to their original LinkedIn article. [Writing index](https://robinwinters.github.io/writing/) · [Republication manifest](writing/republications.json). Original LinkedIn pages and robin.ac remain unchanged.

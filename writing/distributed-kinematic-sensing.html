@@ -1,0 +1,1060 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Distributed Kinematic Sensing and Exercise Intelligence Across Apple Fitness+, GymKit and HealthKit — Robin Winters</title><meta name="description" content="Robin Winters proposes coordinated Apple Watch, AirPods and iPhone sensing for strength training. Original July 2026 article with diagrams and source links.">
+<link rel="canonical" href="https://robinwinters.github.io/writing/distributed-kinematic-sensing.html"><link rel="stylesheet" href="/style.css"><link rel="alternate" type="application/atom+xml" title="Robin Winters: writing" href="/feed.atom">
+<meta property="og:type" content="article"><meta property="og:title" content="Distributed Kinematic Sensing and Exercise Intelligence Across Apple Fitness+, GymKit and HealthKit"><meta property="og:description" content="Robin Winters proposes coordinated Apple Watch, AirPods and iPhone sensing for strength training. Original July 2026 article with diagrams and source links."><meta property="og:url" content="https://robinwinters.github.io/writing/distributed-kinematic-sensing.html"><meta property="og:image" content="https://robinwinters.github.io/writing/images/distributed-kinematic-sensing-5.png"><meta name="twitter:card" content="summary_large_image"><meta property="article:published_time" content="2026-07-18">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://robin.ac/#person", "name": "Robin Winters", "url": "https://robin.ac/"}, {"@type": "WebPage", "@id": "https://robinwinters.github.io/writing/distributed-kinematic-sensing.html#page", "url": "https://robinwinters.github.io/writing/distributed-kinematic-sensing.html", "name": "Distributed Kinematic Sensing and Exercise Intelligence Across Apple Fitness+, GymKit and HealthKit", "about": {"@id": "https://robin.ac/#person"}}, {"@type": "BlogPosting", "headline": "Distributed Kinematic Sensing and Exercise Intelligence Across Apple Fitness+, GymKit and HealthKit", "datePublished": "2026-07-18", "dateModified": "2026-10-02", "author": {"@id": "https://robin.ac/#person"}, "mainEntityOfPage": "https://robinwinters.github.io/writing/distributed-kinematic-sensing.html", "isBasedOn": "https://www.linkedin.com/pulse/distributed-kinematic-sensing-exercise-intelligence-across-winters-ek3ec/", "image": ["https://robinwinters.github.io/writing/images/distributed-kinematic-sensing-1.png", "https://robinwinters.github.io/writing/images/distributed-kinematic-sensing-2.png", "https://robinwinters.github.io/writing/images/distributed-kinematic-sensing-3.png", "https://robinwinters.github.io/writing/images/distributed-kinematic-sensing-4.png", "https://robinwinters.github.io/writing/images/distributed-kinematic-sensing-5.png"], "inLanguage": "en", "isAccessibleForFree": true}]}</script></head>
+<body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="/">Robin Winters</a><nav aria-label="Main"><a href="/#work">Work</a><a href="/#projects">Projects</a><a href="/writing/">Writing</a><a href="/#resume">Resume</a><a href="https://robin.ac/">robin.ac ↗</a></nav></header>
+<main id="main"><article class="prose republished"><h1>Distributed Kinematic Sensing and Exercise Intelligence Across Apple Fitness+, GymKit and HealthKit</h1><p>By <a href="https://robin.ac/">Robin Winters</a></p><p class="note">First published July 18, 2026 on <a href="https://www.linkedin.com/pulse/distributed-kinematic-sensing-exercise-intelligence-across-winters-ek3ec/">LinkedIn</a>. Republished October 2, 2026 with original wording, images and captions. Technical observations and opinions retain their original context.</p>
+
+<img alt="Really need to work on the title." decoding="async" loading="lazy" src="/writing/images/distributed-kinematic-sensing-5.png"/>
+
+<figcaption>
+            Really need to work on the title.
+          </figcaption>
+<div class="article-body">
+
+
+<!-- -->
+<p>
+<em><!-- -->By combining motion data from Apple Watch, AirPods, iPhone and connected gym equipment, Apple devs could make strength training as measurable as running or cycling.<!-- --></em>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->I've been a professional/competitive Bodybuilder for well over a decade now, and I'm constantly amazed at how difficult it is to find a more modern way of tracking my workouts. The vast majority of the fitness tracking ecosystem is primarily geared towards activities that involve some variation of a pedometer and a heart rate monitor. This works great for running or cycling, especially when you throw in a GPS tracker. However, the "Traditional Strength Training" side of fitness tracking is still primarily done manually in some form of zhuzhed up spreadsheet. 
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Don't get me wrong, I'm a big fan of spreadsheets. The internet itself is nothing more than an array of spreadsheets connected by a series of tubes, but I think we can do better than Lotus 1-2-3 in 2026.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->What I'm proposing is basically a form of motion sensor triangulation across AirPods, Apple Watch, and iPhone, tied into GymKit, Fitness+, and HealthKit, sprinkled with Apple Intelligence framework to track and log movements commonly associated with "traditional strength training" aka Bodybuilding, so I don't have to log sets and reps simultaneously during my already demanding workouts. 
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->By coordinating Apple Watch, motion capable AirPods and iPhone, supplementing them with workout programming and connected equipment, we can construct a body area sensing system capable of recognizing exercises, detecting sets, counting repetitions and relating mechanical work to physiological response.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- --><!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<hr/>
+<!-- -->
+<!-- --><!-- -->
+
+<figure>
+
+
+
+
+<!-- --> 
+
+
+
+<!-- -->
+<!-- --> <img alt="Article content" decoding="async" loading="lazy" src="/writing/images/distributed-kinematic-sensing-1.png"/>
+
+
+<figcaption>
+<!-- -->Dumbbell Front Squat, for the curious.<!-- -->
+</figcaption>
+</figure>
+
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<h2>
+<!-- -->Distributed Sensing<!-- -->
+<!-- --> </h2>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->The concept can be described as distributed kinematic sensing; several devices observe different portions of the body and contribute those observations to a shared movement model.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Apple Watch provides the clearest view of the hand and arm. Its accelerometer and gyroscope can measure wrist acceleration, rotation, orientation and repetition cadence. For curls, lateral raises, rows and presses, the wrist trajectory frequently contains enough information to identify repetition phases and estimate tempo.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->The Watch also supplies physiological measurements such as heart rate and heart-rate recovery. It can therefore connect a movement with the body’s response to it.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->AirPods provide a second anatomical reference point. Their motion sensors observe head orientation and movement, helping establish whether the user is standing, seated, hinged forward or lying down. This may help distinguish a standing shoulder press from a bench press, a seated curl from a standing curl or deliberate exercise from unrelated wrist movement.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->AirPods Pro 3 make this role more interesting. Apple now sends AirPods heartrate and motion data to the iPhone during workouts. When AirPods Pro 3 and Apple Watch are worn together, Apple uses multiple heartrate streams and automatically selects the source with the highest confidence at that moment. <a href="https://support.apple.com/en-gb/123184"><!-- -->Apple’s AirPods workout documentation<!-- --></a>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<blockquote>
+<!-- -->Collect overlapping measurements, estimate confidence and use the most reliable source for the current moment.<!-- -->
+<!-- --> </blockquote>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->The iPhone could contribute in two distinct modes. When carried securely in a pocket, it becomes a sensor near the pelvis, making it useful for squats, lunges, deadlifts and step-ups. When positioned to observe the user, its camera could provide whole-body pose estimation, range-of-motion analysis and basic symmetry feedback.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->An iPhone resting in a gym bag would contribute nothing. The system would need to determine whether the phone was operating in pocket mode, camera coach mode or not participating.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Apple already exposes much of the necessary plumbing through <a href="https://developer.apple.com/documentation/coremotion/"><!-- -->Core Motion<!-- --></a><!-- -->, <a href="https://developer.apple.com/documentation/coremotion/cmheadphonemotionmanager"><!-- -->AirPods motion APIs<!-- --></a> and <a href="https://developer.apple.com/documentation/HealthKit/building-a-multidevice-workout-app"><!-- -->mirrored Watch–iPhone workout sessions<!-- --></a><!-- -->.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- --><!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<hr/>
+<!-- -->
+<!-- --><!-- -->
+
+<figure>
+
+
+
+
+<!-- --> 
+
+
+
+<!-- -->
+<!-- --> <img alt="Article content" decoding="async" loading="lazy" src="/writing/images/distributed-kinematic-sensing-2.png"/>
+
+
+<figcaption>
+<!-- -->When I move you move, just like that?<!-- -->
+</figcaption>
+</figure>
+
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<h2>
+<!-- -->Fitness+ has an enormous advantage<!-- -->
+<!-- --> </h2>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Automatic exercise recognition in an open gym is difficult because many movements look similar when observed from one point on the body. Reaching for a water bottle can resemble part of a curl. A front raise can resemble a shoulder press. A barbell squat may produce very little wrist movement.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Fitness+ changes the problem because the workout already has a script. During a Fitness+ session, Apple knows which exercise the trainer is demonstrating, when the interval begins, how long it should last and approximately how many repetitions are expected. It also knows whether the user should be standing, seated, supine or hinged.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->The system no longer needs to ask, “Which of hundreds of exercises is this?” It can ask, “Is the user currently performing the expected squat, and where are the repetition boundaries?”<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->This prior knowledge should make recognition substantially more reliable. It could support live observations such as:<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<ul><li><!-- -->“Rep 8 of 12”<!-- --></li><li><!-- -->“Two repetitions behind the trainer”<!-- --></li><li><!-- -->“Your range of motion shortened during the last three reps”<!-- --></li><li><!-- -->“Your eccentric phase is faster than the previous set”<!-- --></li><li><!-- -->“Your heart rate recovered 18 beats during this rest period”<!-- --></li></ul>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->The experience should remain confidence aware. A low confidence estimate should not be presented as indisputable fact. Fitness+ could display a tentative count or defer confirmation until the rest period.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<h3>
+<!-- -->The Open Gym version<!-- -->
+<!-- --> </h3>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Outside Fitness+, the system could use a progressively assisted workflow.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->A user might begin by selecting a saved routine or naming an exercise with Siri. Once the exercise is known, Apple Watch could detect the beginning and end of each set, count repetitions and measure tempo automatically.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->If no exercise was selected, the system could propose one after observing the movement:<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<blockquote>
+<!-- -->“Looks like 10 incline dumbbell curls. Correct?”<!-- -->
+<!-- --> </blockquote>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->High confidence sets could be committed automatically. Low confidence detections could remain suggestions. Correcting an exercise would provide an individualized calibration signal, allowing the system to learn the user’s preferred movements, wrist placement and equipment.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->A practical processing pipeline would contain several stages:<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<ol><li><strong><!-- -->Activity segmentation:<!-- --></strong> Separate exercise from walking, equipment setup and rest.<!-- --></li><li><strong><!-- -->Posture inference:<!-- --></strong> Use head, wrist and pelvis orientation to estimate body position.<!-- --></li><li><strong><!-- -->Exercise classification:<!-- --></strong> Compare the observed movement with the routine, Fitness+ timeline and trained exercise library.<!-- --></li><li><strong><!-- -->Rep phase detection:<!-- --></strong> Identify concentric, transition and eccentric phases.<!-- --></li><li><strong><!-- -->Confidence estimation:<!-- --></strong> Decide whether to save, suggest or request confirmation.<!-- --></li><li><strong><!-- -->Physiological association:<!-- --></strong> Relate each set to heart rate, recovery and perceived effort.<!-- --></li></ol>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->On device processing would allow raw motion and camera data to remain local. Only the derived workout record would need to enter HealthKit.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<h3>
+<!-- -->This is already an active product category<!-- -->
+<!-- --> </h3>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Automatic strength tracking is not an untouched field. Several companies already offer parts of the proposed experience.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<a href="https://apps.apple.com/us/app/sonar-fit/id6740939129"><!-- -->Sonar Fit<!-- --></a> uses Apple Watch or AirPods Pro motion sensors to count repetitions, detect sets and begin rest timers. It specifically describes using AirPods for head motion tracking and permits users to train with the Watch, AirPods or both.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<a href="https://gethealthbuddy.com/"><!-- -->HealthBuddy<!-- --></a> also uses an on device movement model that reads accelerometer and gyroscope data from AirPods and Apple Watch. It performs live rep counting and connects with Apple Health.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Neither product publicly explains whether Watch and AirPods data are combined into one confidence weighted movement model or primarily operate as alternative input sources. Neither presents the wider Fitness+, GymKit, standardized strength data and Vitals architecture proposed here.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<a href="https://www.trainfitness.ai/"><!-- -->Train Fitness<!-- --></a> demonstrates how far wrist only recognition has progressed. The company claims automatic detection of more than 470 exercises, along with rep, acceleration, velocity and tempo tracking using smartwatch movement.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Garmin has offered automatic rep counting, set detection and exercise identification in its Strength profile for years. Its own documentation acknowledges the need for users to correct counts when necessary. <a href="https://support.garmin.com/en-SG/?faq=xEPSpxE3j27gpEsiq8K9o8"><!-- -->Garmin’s rep-counting documentation<!-- --></a>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->WHOOP has approached the problem from another direction. Its Strength Trainer uses inertial motion, biomechanics and cardiovascular data to estimate muscular load and incorporate it into Strain and Recovery. For the most precise calculation, users enter exercises, sets, repetitions and weight; its hands-off mode estimates muscular demand from movement profiles and heart rate. <a href="https://www.whoop.com/us/en/thelocker/the-research-and-development-behind-strength-trainer/"><!-- -->WHOOP’s Strength Trainer research<!-- --></a>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Connected gyms such as Tonal and Tempo solve the sensing problem by controlling the environment. Tonal measures cable displacement and resistance while tracking pace, range, symmetry and repetitions; Tonal 2 adds camera-based analysis. Tempo uses iPhone based computer vision and recognizable weights to provide rep counting and guidance. These systems can produce richer measurements, but only within their respective equipment ecosystems. <a href="https://knowledge.tonal.com/kb/guide/en/coaching-cues-9XTywueFNJ/Steps/3954702"><!-- -->Tonal’s coaching system<!-- --></a><!-- -->, <a href="https://tempo.fit/blog/introducing-the-tempo-move"><!-- -->Tempo’s iPhone-based system<!-- --></a>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->The market has therefore produced many of the pieces. What it has not produced is a shared platform that makes those pieces interoperable.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<h3>
+<!-- -->Google has patented the earbud-plus-watch concept<!-- -->
+<!-- --> </h3>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Google’s patent portfolio contains a particularly relevant example.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Its system receives motion data from two wearable devices, explicitly suggesting that the first may be an earbud and the second a smartwatch. Multiple inertial streams are processed to determine exercise types and repetitions. The European patent was granted in March 2025 and is currently listed as active. <a href="https://patents.google.com/patent/EP3973448A1/en"><!-- -->Google’s exercise-recognition patent<!-- --></a>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->This is strong evidence that distributed ear/wrist exercise recognition has been considered at a serious engineering level.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->It also means that combining earbud and smartwatch IMUs should not be characterized as an entirely new invention. The more differentiated question is how Apple could turn distributed sensing into a coherent platform experience.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<h3>
+<!-- -->Apple has contemplated much of the larger system<!-- -->
+<!-- --> </h3>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Apple’s own pending patent application, <strong><!-- -->“Detecting and Tracking a Workout Using Sensors,”<!-- --></strong> was published in March 2025.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->It describes a system capable of:<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<ul><li><!-- -->Identifying specific strength exercises<!-- --></li><li><!-- -->Counting repetitions and sets<!-- --></li><li><!-- -->Detecting incomplete repetitions<!-- --></li><li><!-- -->Combining computer vision with smartwatch IMU data<!-- --></li><li><!-- -->Receiving data from smartphones, heart-rate monitors and external sensors<!-- --></li><li><!-- -->Detecting work and rest periods<!-- --></li><li><!-- -->Adjusting rest guidance using heart rate or respiration<!-- --></li><li><!-- -->Identifying weights through computer vision and OCR<!-- --></li><li><!-- -->Receiving equipment data through RFID, NFC, Bluetooth or Wi-Fi<!-- --></li><li><!-- -->Detecting selector-pin positions and calculating barbell plate loads<!-- --></li></ul>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->The application is heavily oriented toward a head mounted spatial computing device (can't image what that might be /s) but its supporting sensor network closely resembles the broader architecture considered here. <a href="https://patents.google.com/patent/US20250099814A1/en"><!-- -->Apple’s workout-tracking patent<!-- --></a>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->A patent does not guarantee that a product will ship. It does, however, demonstrate that Apple has considered automatic strength recognition, rep counting, weight identification and cross-device sensing in a unified system.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- --><!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<hr/>
+<!-- -->
+<!-- --><!-- -->
+
+<figure>
+
+
+
+
+<!-- --> 
+
+
+
+<!-- -->
+<!-- --> <img alt="Article content" decoding="async" loading="lazy" src="/writing/images/distributed-kinematic-sensing-3.png"/>
+
+
+<figcaption>
+<!-- -->How is the phone staying connected to her hip?<!-- -->
+</figcaption>
+</figure>
+
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<h2>
+<!-- -->What the research says<!-- -->
+<!-- --> </h2>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Researchers have studied exercise recognition and repetition counting from wearable inertial sensors for more than a decade. Results can be impressive for movements that produce distinct trajectories, but accuracy varies significantly by exercise and sensor location.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->One study evaluated sensors worn at the chest, upper arm, wrist and ear. The chest-mounted sensor performed best, while the ear-mounted sensor performed worst by itself. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7795271/"><!-- -->ExerSense study<!-- --></a>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->That supports a "Division of responsibility". AirPods should normally serve as contextual evidence rather than the universal primary rep counter. Their value lies in helping the system understand posture and body motion when Apple Watch sees only the wrist.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Other Apple Watch research has achieved promising exercise recognition and repetition counting results, although bench press has proven more difficult than squats or deadlifts in some evaluations. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8471343/"><!-- -->Smartwatch strength-training validation study<!-- --></a>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->No individual sensor should be expected to understand every exercise. The benefit of distributed sensing is that the system can degrade gracefully:<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<ul><li><!-- -->A curl may be counted primarily by the Watch.<!-- --></li><li><!-- -->A squat may rely more heavily on the pocketed iPhone.<!-- --></li><li><!-- -->A bench press may combine Watch motion with AirPods posture.<!-- --></li><li><!-- -->A camera-enabled session may override uncertain inertial estimates with pose information.<!-- --></li><li><!-- -->A connected machine may directly report movement and resistance.<!-- --></li></ul>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<h3>
+<!-- -->The resistance problem<!-- -->
+<!-- --> </h3>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->One measurement remains difficult to infer from body motion alone: the actual weight being lifted.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->A slow repetition could indicate a heavy load, intentional tempo, accumulated fatigue or an inexperienced lifter. None of those possibilities can be distinguished reliably from rep velocity alone.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Resistance must therefore come from another source:<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<ul><li><!-- -->User input<!-- --></li><li><!-- -->A remembered previous load with quick confirmation<!-- --></li><li><!-- -->Computer vision reading a dumbbell, plate or selector stack<!-- --></li><li><!-- -->NFC or QR identification<!-- --></li><li><!-- -->A connected cable machine, rack or smart weight<!-- --></li><li><!-- -->A strength-oriented extension of GymKit<!-- --></li></ul>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Apple’s patent explicitly discusses visual weight recognition, selector pins, RFID, NFC and wireless equipment communication. That validates the importance of the equipment layer. I personally think that NFC and QR/RFID weights would be a huge step in the right direction, and would be fairly trivial to implement; NFC stickers applied to free weights or plate loaded machines, etc etc. 
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->A future GymKit for strength equipment could communicate:<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<ul><li><!-- -->Equipment and exercise identity<!-- --></li><li><!-- -->Selected resistance<!-- --></li><li><!-- -->Cable or lever displacement<!-- --></li><li><!-- -->Rep velocity<!-- --></li><li><!-- -->Range of motion<!-- --></li><li><!-- -->Left/right force or displacement<!-- --></li><li><!-- -->Seat and handle configuration<!-- --></li><li><!-- -->Weight changes during drop sets<!-- --></li></ul>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<h3>
+<!-- -->HealthKit needs a strength training data model<!-- -->
+<!-- --> </h3>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->HealthKit recognizes traditionalStrengthTraining as an activity type for machine and free-weight exercise. It also permits custom metadata to be associated with workouts. But it does not currently offer a standardized, interoperable schema for strength training structure.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->An application can record sets and reps through custom metadata, but another application may not understand what those fields mean. <a href="https://developer.apple.com/documentation/healthkit/workout-metadata-keys"><!-- -->HealthKit workout metadata<!-- --></a> demonstrates both the available foundation and the limitation.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->A native strength representation should be hierarchical:<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<blockquote>
+<!-- -->Workout → Exercise → Set → Repetition<!-- -->
+<!-- --> </blockquote>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->An exercise record could contain:<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<ul><li><!-- -->Exercise identity and variation<!-- --></li><li><!-- -->Equipment<!-- --></li><li><!-- -->Primary movement pattern<!-- --></li><li><!-- -->Targeted muscle groups<!-- --></li><li><!-- -->Confidence and provenance<!-- --></li></ul>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->A set could contain:<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<ul><li><!-- -->Resistance<!-- --></li><li><!-- -->Repetitions<!-- --></li><li><!-- -->Set type<!-- --></li><li><!-- -->Duration<!-- --></li><li><!-- -->Rest interval<!-- --></li><li><!-- -->Perceived effort<!-- --></li></ul>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Individual repetitions could optionally include:<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<ul><li><!-- -->Concentric and eccentric duration<!-- --></li><li><!-- -->Range of motion<!-- --></li><li><!-- -->Velocity<!-- --></li><li><!-- -->Completion quality<!-- --></li><li><!-- -->Sensor confidence<!-- --></li></ul>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->This would allow Fitness+, third party workout apps, connected gym equipment and coaching platforms to exchange strength data rather than reducing an entire session to duration and calories.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<h3>
+<!-- -->Connecting mechanical work to Vitals<!-- -->
+<!-- --> </h3>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->The Vitals app is primarily based on overnight measurements such as heart rate, respiratory rate, wrist temperature and sleep duration. Those signals should not be used to detect repetitions. Their value is as recovery context. <a href="https://support.apple.com/en-in/guide/watch/apd15aa7ed96/watchos"><!-- -->Apple’s Vitals documentation<!-- --></a>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->The more useful relationship is:<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<blockquote>
+<!-- -->Overnight baseline → planned workout → measured sets and resistance → effort score → recovery trend<!-- -->
+<!-- --> </blockquote>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->HealthKit already supports perceived and estimated workout effort, while Apple’s training-load system compares recent workout intensity and duration with longer term activity. <a href="https://developer.apple.com/documentation/Updates/HealthKit"><!-- -->HealthKit effort support<!-- --></a>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Duration alone is an incomplete description of strength training. Fortyfive minutes might contain a light circuit, a heavy squat session or more conversation than lifting.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->A record of 14 working sets, 8,200 pounds of total volume and declining concentric velocity provides much richer context. It would help training load reflect the work performed rather than merely how long the workout app remained active.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->WHOOP’s muscular load model demonstrates demand for precisely this connection. Apple could go further by combining mechanical records, workout effort and overnight trends within HealthKit.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<h3>
+<!-- -->A realistic product roadmap<!-- -->
+<!-- --> </h3>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->The strongest first gen product would begin with Apple Watch and a known workout plan. Fitness+ sessions, saved routines and user-selected exercises would provide the expected movement. The Watch would detect repetition timing. AirPods would help establish posture. The iPhone could optionally contribute pelvis motion or camera pose.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->The progression might look like this:<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<h3>
+<!-- -->Phase one: Fitness+ intelligence<!-- -->
+<!-- --> </h3>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<ul><li><!-- -->Known exercise and interval<!-- --></li><li><!-- -->Watch based rep counting<!-- --></li><li><!-- -->Automatic set timing<!-- --></li><li><!-- -->AirPods posture confirmation<!-- --></li><li><!-- -->Live tempo and range consistency<!-- --></li></ul>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<h3>
+<!-- -->Phase two: Structured open gym workouts<!-- -->
+<!-- --> </h3>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<ul><li><!-- -->User selected routines<!-- --></li><li><!-- -->Automatic set detection<!-- --></li><li><!-- -->Suggested exercise corrections<!-- --></li><li><!-- -->Remembered resistance<!-- --></li><li><!-- -->Training volume and effort summaries<!-- --></li></ul>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<h3>
+<!-- -->Phase three: Freeform recognition<!-- -->
+<!-- --> </h3>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<ul><li><!-- -->Automatic exercise classification<!-- --></li><li><!-- -->Personalized movement calibration<!-- --></li><li><!-- -->Confidence aware confirmations<!-- --></li><li><!-- -->Pocket and camera modes for iPhone<!-- --></li></ul>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<h3>
+<!-- -->Phase four: Connected strength equipment<!-- -->
+<!-- --> </h3>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<ul><li><!-- -->GymKit resistance and equipment identity<!-- --></li><li><!-- -->Machine configuration<!-- --></li><li><!-- -->Cable or bar velocity<!-- --></li><li><!-- -->Standardized HealthKit set and rep record<!-- --></li></ul>
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- --><!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<hr/>
+<!-- -->
+<!-- --><!-- -->
+
+<figure>
+
+
+
+
+<!-- --> 
+
+
+
+<!-- -->
+<!-- --> <img alt="Article content" decoding="async" loading="lazy" src="/writing/images/distributed-kinematic-sensing-4.png"/>
+
+
+<figcaption>
+<!-- -->Straight Leg Deadlifts with about a buck'80 in plates is no joke<!-- -->
+</figcaption>
+</figure>
+
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Smartwatches already count repetitions. AirPods based apps already estimate strength movement. WHOOP models muscular load. Tonal measures resistance and cable displacement. Tempo uses iPhone computer vision. Google has patented earbud + watch exercise recognition. Apple has patented a wider system involving computer vision, smartwatch motion, automatic rep counting and equipment identification.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Apple owns the Watch, AirPods, iPhone, Fitness+, Workout, HealthKit and GymKit. It also controls the privacy, synchronization and on device processing layers required to unify exercise recognition, distributed sensing, equipment telemetry and physiological recovery into a single first party platform.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->This could transform Traditional Strength Training from a timer with a heartrate graph into a computational record of what the athlete actually did and give strength training the same depth of measurement Apple already brings to running and cycling.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->🤘Robin<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- --> 
+
+<!-- -->
+
+</div><p><a href="/writing/">All writing</a> · <a href="https://www.linkedin.com/pulse/distributed-kinematic-sensing-exercise-intelligence-across-winters-ek3ec/">Original LinkedIn edition</a></p></article></main><footer><p>Robin Winters · San Francisco · <a href="mailto:robin@showflex.pro">robin@showflex.pro</a></p><p>This is a self-authored professional reference, prepared with editorial assistance. Updated October 2, 2026. <a href="https://github.com/RobinWinters/robinwinters.github.io">Public source</a> · <a href="https://github.com/RobinWinters/RobinWinters/tree/Radpository/professional">Record and evidence</a></p></footer></body></html>

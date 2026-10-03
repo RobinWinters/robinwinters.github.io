@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>In iOS 27 and Xcode 27 Liquid Glass will be applied to your app automatically. — Robin Winters</title><meta name="description" content="Robin Winters discusses Liquid Glass implementation in ShowFlex. Original June 2026 developer-beta observations, republished with images and links to original videos.">
+<link rel="canonical" href="https://robinwinters.github.io/writing/ios-27-liquid-glass.html"><link rel="stylesheet" href="/style.css"><link rel="alternate" type="application/atom+xml" title="Robin Winters: writing" href="/feed.atom">
+<meta property="og:type" content="article"><meta property="og:title" content="In iOS 27 and Xcode 27 Liquid Glass will be applied to your app automatically."><meta property="og:description" content="Robin Winters discusses Liquid Glass implementation in ShowFlex. Original June 2026 developer-beta observations, republished with images and links to original videos."><meta property="og:url" content="https://robinwinters.github.io/writing/ios-27-liquid-glass.html"><meta property="og:image" content="https://robinwinters.github.io/writing/images/ios-27-liquid-glass-2.jpg"><meta name="twitter:card" content="summary_large_image"><meta property="article:published_time" content="2026-06-30">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://robin.ac/#person", "name": "Robin Winters", "url": "https://robin.ac/"}, {"@type": "WebPage", "@id": "https://robinwinters.github.io/writing/ios-27-liquid-glass.html#page", "url": "https://robinwinters.github.io/writing/ios-27-liquid-glass.html", "name": "In iOS 27 and Xcode 27 Liquid Glass will be applied to your app automatically.", "about": {"@id": "https://robin.ac/#person"}}, {"@type": "BlogPosting", "headline": "In iOS 27 and Xcode 27 Liquid Glass will be applied to your app automatically.", "datePublished": "2026-06-30", "dateModified": "2026-10-02", "author": {"@id": "https://robin.ac/#person"}, "mainEntityOfPage": "https://robinwinters.github.io/writing/ios-27-liquid-glass.html", "isBasedOn": "https://www.linkedin.com/pulse/ios-27-xcode-liquid-glass-applied-your-app-robin-winters-mcxnc/", "image": ["https://robinwinters.github.io/writing/images/ios-27-liquid-glass-1.png", "https://robinwinters.github.io/writing/images/ios-27-liquid-glass-2.jpg"], "inLanguage": "en", "isAccessibleForFree": true}]}</script></head>
+<body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="/">Robin Winters</a><nav aria-label="Main"><a href="/#work">Work</a><a href="/#projects">Projects</a><a href="/writing/">Writing</a><a href="/#resume">Resume</a><a href="https://robin.ac/">robin.ac ↗</a></nav></header>
+<main id="main"><article class="prose republished"><h1>In iOS 27 and Xcode 27 Liquid Glass will be applied to your app automatically.</h1><p>By <a href="https://robin.ac/">Robin Winters</a></p><p class="note">First published June 30, 2026 on <a href="https://www.linkedin.com/pulse/ios-27-xcode-liquid-glass-applied-your-app-robin-winters-mcxnc/">LinkedIn</a>. Republished October 2, 2026 with original wording, images and captions. Technical observations and opinions retain their original context.</p>
+
+<img alt="Apple's Liquid Glass Design Language" decoding="async" loading="lazy" src="/writing/images/ios-27-liquid-glass-2.jpg"/>
+
+<figcaption>
+            Apple's Liquid Glass Design Language
+          </figcaption>
+<div class="article-body">
+
+
+<!-- -->
+<p>
+<!-- -->The grace period for opting out is over and Liquid Glass will be applied to your app automatically, like it or not.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->In all honesty I didn't really understand Liquid Glass when it was announced at dub dub last year. However, after several developer events including "one on one's" and lab appointments at Apple campus, I've come around to it. 
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Below is a somewhat impromptu look at how I've implemented Liquid Glass into my projects. Important to note that I'm usually running the developer beta of whatever I'm building for/in, including Xcode, and things are subject to change before public updates go out. CYA. 
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- --><!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<hr/>
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Like a lot of other devs, I've been tinkering with all the new fine tuning features in iOS/Xcode 27, and there's a LOT to go over. Most importantly, imo, is the Device Hub. 
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- --><!-- -->
+
+<figure>
+<!-- -->
+
+
+<!-- -->
+<!-- --> <img alt="Article content" decoding="async" loading="lazy" src="/writing/images/ios-27-liquid-glass-1.png"/>
+
+
+<figcaption>
+<!-- -->It's...glorious.<!-- -->
+</figcaption>
+</figure>
+
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Not to gush, but the Device Hub has been on many a wish list and Apple delivered. Testing is  one of my favorite things to do during the development process, and being able to visually poke at UI/UX across devices and OS iterations, and tweaking the accessibility features is just "Chef's Kiss" for me. 
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Anyway! 
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->I've tried to use Liquid Glass as minimally as possible. As a design principle, I want the UI to get out of the user's way so the content and UX are the primary focus. For ShowFlex, the strongest use is in the global navigation layer. The floating header orb and bottom tab bar use <strong><!-- -->GlassEffectContainer<!-- --></strong><!-- -->, circular<!-- --><strong> .glassEffect<!-- --></strong><!-- -->, <strong><!-- -->glassEffectID<!-- --></strong><!-- -->, and matched geometry so the app’s primary controls behave like native system surfaces. The controls sit above constantly changing content. Event/News feeds, rosters, athlete cards, event details, and social views. Liquid Glass lets the chrome hangout in reach without becoming heavy, and it gives taps, expansion, collapse, and selection changes a physical feel.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- --><!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+
+<figure><p><a href="https://www.linkedin.com/pulse/ios-27-xcode-liquid-glass-applied-your-app-robin-winters-mcxnc/">Watch this video in the original LinkedIn article</a></p></figure>
+<figcaption>
+        I call it "Bloopy"
+      </figcaption>
+
+<p>
+<!-- -->I try to not overuse it. Dense content surfaces, especially the athlete lineup cards in the above video from the app, often keep a stable filled background and add a lighter custom glass edge treatment instead of full translucency, but the clear material modifier looks pretty cool with bright colors and patterns passing underneath it. Adjust as needed, especially using/testing with Device Hub, to keep things readable and fast in scan heavy areas while still giving the product the same polished visual vocabulary. For more focused surfaces like auth gates, I used native glass more directly b/c those elements benefit from a stronger sense of elevation and touchability. "Touchability" is a word now, just like "Bloopy" which is what I call the animation effect for the tab bar at the bottom of the screen.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->It's basically a question of hierarchy. Glass marks interactive surfaces as touchable, while content cards stay legible. Interactive glass is mostly reserved for things the user acts on like passive surfaces using regular glass or edge highlights.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->There’s also a shared adapter layer <strong><!-- -->sfGlass<!-- --></strong> applies native <strong><!-- -->.glassEffect<!-- --></strong> and keeps an <strong><!-- -->.ultraThinMaterial<!-- --></strong> fallback for older probes. That wrapper is used for practical control surfaces like search bars and sheets. A custom <strong><!-- -->liquidGlassEdge<!-- --></strong> and <strong><!-- -->lightweightLiquidGlassEdge<!-- --></strong> modifiers keep the existing solid card background, then add rim/highlight treatment for depth without making dense list content fully translucent.<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- --><!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+
+<figure><p><a href="https://www.linkedin.com/pulse/ios-27-xcode-liquid-glass-applied-your-app-robin-winters-mcxnc/">Watch this video in the original LinkedIn article</a></p></figure>
+<figcaption>
+        Auth screen
+      </figcaption>
+
+<p>
+<!-- -->On the main auth screen Liquid Glass is used as the control layer over a video backdrop. It renders a looping video background, darkens it with a black overlay, then places the branding and auth controls directly on top, letting the screen feel cinematic while the glass controls pick up the background motion/material instead of hiding it. I think about it like applying an optical illusion to a control surface so we're not blocking the action going on in the back, but also keeping the layers separate. 
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->That's it for now! 
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Apple says pretty specifically to not overuse the material modifier and to use native as much as possible. Group menus and effects so rendering doesn't bog the device down, and keep in mind the accessibility features as they can fundamentally change the UI/UX. Use Device Hub and Instruments to pick out and shave off hangs and root out resource hogs. Biggest takeaway: Less is more. Get out of the user's way and let the device do the work with native implementations over custom jobs. 
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->Build accordingly and have fun!<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<p>
+<!-- -->🤘Robin<!-- -->
+<!-- --> </p>
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- --> 
+
+<!-- -->
+
+</div><p><a href="/writing/">All writing</a> · <a href="https://www.linkedin.com/pulse/ios-27-xcode-liquid-glass-applied-your-app-robin-winters-mcxnc/">Original LinkedIn edition</a></p></article></main><footer><p>Robin Winters · San Francisco · <a href="mailto:robin@showflex.pro">robin@showflex.pro</a></p><p>This is a self-authored professional reference, prepared with editorial assistance. Updated October 2, 2026. <a href="https://github.com/RobinWinters/robinwinters.github.io">Public source</a> · <a href="https://github.com/RobinWinters/RobinWinters/tree/Radpository/professional">Record and evidence</a></p></footer></body></html>
