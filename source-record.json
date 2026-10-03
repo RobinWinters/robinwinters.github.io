@@ -1,8 +1,8 @@
 {
   "name": "Robin Winters public HTML reference",
-  "factApproval": "Supported work facts approved October 2, 2026; NASM PBC attribution and wording approved October 3, 2026; unresolved academic qualifications omitted",
+  "factApproval": "Supported work facts approved October 2, 2026; PBC attribution and wording, TORos contribution, NASM-CPT and exact title NASM Certified Nutritionist confirmed by Robin October 3, 2026. Robin instructed inclusion now, with individual verification links to follow. Unresolved academic qualifications, credential dates and expiry are omitted.",
   "sourceRecord": "https://github.com/RobinWinters/RobinWinters/blob/Radpository/professional/professional-record.json",
-  "sourceCommit": "038117ba37fa56617dda27554fcbaa6e4ac44b73",
+  "sourceCommit": "840e4008436afd79cefa7d5510c0768a7db65f52",
   "authorship": "Self-authored professional reference with editorial/coding-assistant support",
   "teachingExamples": "Separate educational artifacts; synthetic event fixtures; not private product source or customer deployments",
   "sourceFiles": [
@@ -18,5 +18,6 @@
     "ATS registration",
     "Independent verification"
   ],
-  "credentialEvidence": "https://credentials.nasm.org/1fbcae42-b595-4fc8-a1ad-ac09fdc542b4"
+  "credentialEvidence": "https://credentials.nasm.org/1fbcae42-b595-4fc8-a1ad-ac09fdc542b4",
+  "additionalCredentialEvidence": "NASM-CPT and exact title NASM Certified Nutritionist confirmed directly by Robin October 3, 2026; dates and individual issuer verification links to follow"
 }
