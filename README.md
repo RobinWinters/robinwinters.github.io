@@ -39,3 +39,5 @@ The HTML editions expose Dublin Core metadata following [Zotero documentation](h
 [ShowFlex product reference](https://robinwinters.github.io/discovery/showflex.html) · [Speaker and editor biographies](https://robinwinters.github.io/discovery/speaker.html)
 
 Role-focused Word files: [iOS](https://robinwinters.github.io/resumes/ios.docx), [Forward Deployed Engineer target](https://robinwinters.github.io/resumes/forward-deployed.docx), [fitness technology](https://robinwinters.github.io/resumes/fitness-tech.docx). These reproduce the corresponding text variants; no particular ATS parsing or application submission is established.
+
+Public feed delivery: [canonical topics and push-update instructions](writing/feed-delivery.md).

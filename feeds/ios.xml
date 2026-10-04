@@ -714,5 +714,5 @@ Build accordingly and have fun!
       <atom:link rel="related" href="https://medium.com/@robin_61077/in-ios-27-and-xcode-27-liquid-glass-will-be-applied-to-your-app-automatically-48c61ffbb971" type="text/html" title="Medium edition" />
       <atom:link rel="related" href="https://robinwinters.hashnode.dev/in-ios-27-and-xcode-27-liquid-glass-will-be-applied-to-your-app-automatically" type="text/html" title="Hashnode edition" />
     </item>
-  </channel>
+  <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" /></channel>
 </rss>
