@@ -21,3 +21,5 @@ The confirmed Medium and Hashnode profiles appear in visible identity links, the
 ## Browsable Swift package documentation
 
 `docs/fitness-event-data-pipeline/` contains the static-hosting output of the public educational package’s DocC catalog, generated with Swift 6.4 from package commit `08d138d81f50001fa02c553e5a9873ace8fc1b0f`. [API reference](https://robinwinters.github.io/docs/fitness-event-data-pipeline/documentation/fitnesseventdatapipeline/) · [Fixture walkthrough](https://robinwinters.github.io/docs/fitness-event-data-pipeline/documentation/fitnesseventdatapipeline/inspectingnormalization/). This hosted snapshot is independent of pending Swift Package Index acceptance; generated documentation files are not new original articles or independent corroboration. The fixture is synthetic and no private ShowFlex source is included.
+
+Current editable Word resume: [resume.docx](resume.docx). Same 50 approved nonempty text lines as the October 3 plain-text record; two rendered pages reviewed. No particular ATS compatibility guarantee.
