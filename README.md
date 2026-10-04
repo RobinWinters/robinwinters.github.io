@@ -33,3 +33,9 @@ Twelve original writing/work-account records. Export formats preserve original p
 Topic RSS: [iOS](https://robinwinters.github.io/feeds/ios.xml), [applied AI](https://robinwinters.github.io/feeds/applied-ai.xml), [fitness technology](https://robinwinters.github.io/feeds/fitness-tech.xml). These subsets reuse the original identifiers and full text.
 
 The HTML editions expose Dublin Core metadata following [Zotero documentation](https://www.zotero.org/support/dev/exposing_metadata). Import files are available; no actual external library adoption or search ranking improvement is established. Bibliography source: writing/bibliography.json.
+
+## Application and editorial material
+
+[ShowFlex product reference](https://robinwinters.github.io/discovery/showflex.html) · [Speaker and editor biographies](https://robinwinters.github.io/discovery/speaker.html)
+
+Role-focused Word files: [iOS](https://robinwinters.github.io/resumes/ios.docx), [Forward Deployed Engineer target](https://robinwinters.github.io/resumes/forward-deployed.docx), [fitness technology](https://robinwinters.github.io/resumes/fitness-tech.docx). These reproduce the corresponding text variants; no particular ATS parsing or application submission is established.
