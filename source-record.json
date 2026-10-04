@@ -2,14 +2,20 @@
   "name": "Robin Winters public HTML reference",
   "factApproval": "Supported work facts approved October 2, 2026; PBC attribution and wording, TORos contribution, NASM-CPT and exact title NASM Certified Nutritionist confirmed by Robin October 3, 2026. Robin instructed inclusion now, with individual verification links to follow. Unresolved academic qualifications, credential dates and expiry are omitted.",
   "sourceRecord": "https://github.com/RobinWinters/RobinWinters/blob/Radpository/professional/professional-record.json",
-  "sourceCommit": "840e4008436afd79cefa7d5510c0768a7db65f52",
+  "sourceCommit": "7041dc02614de584a9f1a7aabbdc648ecb8d7559",
   "authorship": "Self-authored professional reference with editorial/coding-assistant support",
   "teachingExamples": "Separate educational artifacts; synthetic event fixtures; not private product source or customer deployments",
   "sourceFiles": [
     "index.html",
     "writing/index.html",
     "writing/swift-search-request-ownership.html",
-    "writing/fitness-event-data-contracts.html"
+    "writing/fitness-event-data-contracts.html",
+    "review/ios.html",
+    "review/applied-ai.html",
+    "review/fitness-tech.html",
+    "feed.json",
+    "contact.vcf",
+    "writing/swiftui-search-ownership-demo.html"
   ],
   "canonicalPortfolio": "https://robin.ac/",
   "publicationDoesNotEstablish": [
@@ -19,5 +25,6 @@
     "Independent verification"
   ],
   "credentialEvidence": "https://credentials.nasm.org/1fbcae42-b595-4fc8-a1ad-ac09fdc542b4",
-  "additionalCredentialEvidence": "NASM-CPT and exact title NASM Certified Nutritionist confirmed directly by Robin October 3, 2026; dates and individual issuer verification links to follow"
+  "additionalCredentialEvidence": "NASM-CPT and exact title NASM Certified Nutritionist confirmed directly by Robin October 3, 2026; dates and individual issuer verification links to follow",
+  "nativeCaptureScope": "October 3, 2026: initial screen, one synthetic Strength search result and selection in iOS simulator. Remaining UI review and recording incomplete."
 }
