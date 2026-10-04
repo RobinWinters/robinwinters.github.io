@@ -1772,5 +1772,5 @@ May the Force be with you.
       <atom:link rel="related" href="https://dev.to/robinwinters/what-if-myspace-had-it-right-30oh" type="text/html" title="DEV edition" />
       <atom:link rel="related" href="https://medium.com/@robin_61077/what-if-myspace-had-it-right-f60f1a9fa31c" type="text/html" title="Medium edition" />
     </item>
-  <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" /></channel>
+  <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" /><atom:link rel="hub" href="https://switchboard.p3k.io/" /></channel>
 </rss>
