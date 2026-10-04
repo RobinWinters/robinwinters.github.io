@@ -16,7 +16,7 @@ Seven articles are republished with original text, source links, dates, captions
 
 ## Connected publishing accounts — October 3, 2026
 
-The confirmed Medium, Hashnode and DEV profiles appear in visible identity links and the professional reference. Twelve original writing/work-account sources have twelve Medium, nine Hashnode and twelve DEV editions; three archived Hashnode editions are excluded. The writing index retains original source attribution. Existing SwiftUI editions include two actual native simulator captures. No robin.ac or LinkedIn edit is included.
+The confirmed Medium, Hashnode and DEV profiles appear in visible identity links and the professional reference. Thirteen original writing/work-account sources have twelve Medium, nine Hashnode and thirteen DEV editions; three archived Hashnode editions are excluded. The writing index retains original source attribution. Existing SwiftUI editions include two actual native simulator captures. No robin.ac or LinkedIn edit is included.
 
 ## Browsable Swift package documentation
 
@@ -26,7 +26,7 @@ Current editable Word resume: [resume.docx](resume.docx). Same 50 approved nonem
 
 ## Citation and subject-feed exports — October 3, 2026
 
-Twelve original writing/work-account records. Export formats preserve original publication dates, author and source URLs; mirrors are not additional works or independent corroboration. Educational code retains assistant-support disclosures.
+Thirteen original writing/work-account records. Export formats preserve original publication dates, author and source URLs; mirrors are not additional works or independent corroboration. Educational code retains assistant-support disclosures.
 
 [Browse citations](https://robinwinters.github.io/writing/citations.html) · [CSL JSON](https://robinwinters.github.io/bibliography.csl.json) · [RIS](https://robinwinters.github.io/bibliography.ris) · [BibTeX](https://robinwinters.github.io/bibliography.bib)
 
