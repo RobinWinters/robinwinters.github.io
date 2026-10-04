@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<opml version="2.0">
+  <head>
+    <title>Robin Winters technical writing</title>
+  </head>
+  <body>
+    <outline text="Robin Winters technical writing" title="Robin Winters technical writing" type="rss" xmlUrl="https://robinwinters.github.io/feed.xml" htmlUrl="https://robinwinters.github.io/writing/" />
+    <outline text="Robin Winters on DEV" title="Robin Winters on DEV" type="rss" xmlUrl="https://dev.to/feed/robinwinters" htmlUrl="https://dev.to/robinwinters" />
+    <outline text="Robin Winters on Medium" title="Robin Winters on Medium" type="rss" xmlUrl="https://medium.com/feed/@robin_61077" htmlUrl="https://medium.com/@robin_61077" />
+  </body>
+</opml>
