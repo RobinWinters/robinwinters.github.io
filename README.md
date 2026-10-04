@@ -23,3 +23,13 @@ The confirmed Medium and Hashnode profiles appear in visible identity links, the
 `docs/fitness-event-data-pipeline/` contains the static-hosting output of the public educational package’s DocC catalog, generated with Swift 6.4 from package commit `08d138d81f50001fa02c553e5a9873ace8fc1b0f`. [API reference](https://robinwinters.github.io/docs/fitness-event-data-pipeline/documentation/fitnesseventdatapipeline/) · [Fixture walkthrough](https://robinwinters.github.io/docs/fitness-event-data-pipeline/documentation/fitnesseventdatapipeline/inspectingnormalization/). This hosted snapshot is independent of pending Swift Package Index acceptance; generated documentation files are not new original articles or independent corroboration. The fixture is synthetic and no private ShowFlex source is included.
 
 Current editable Word resume: [resume.docx](resume.docx). Same 50 approved nonempty text lines as the October 3 plain-text record; two rendered pages reviewed. No particular ATS compatibility guarantee.
+
+## Citation and subject-feed exports — October 3, 2026
+
+Twelve original writing/work-account records. Export formats preserve original publication dates, author and source URLs; mirrors are not additional works or independent corroboration. Educational code retains assistant-support disclosures.
+
+[Browse citations](https://robinwinters.github.io/writing/citations.html) · [CSL JSON](https://robinwinters.github.io/bibliography.csl.json) · [RIS](https://robinwinters.github.io/bibliography.ris) · [BibTeX](https://robinwinters.github.io/bibliography.bib)
+
+Topic RSS: [iOS](https://robinwinters.github.io/feeds/ios.xml), [applied AI](https://robinwinters.github.io/feeds/applied-ai.xml), [fitness technology](https://robinwinters.github.io/feeds/fitness-tech.xml). These subsets reuse the original identifiers and full text.
+
+The HTML editions expose Dublin Core metadata following [Zotero documentation](https://www.zotero.org/support/dev/exposing_metadata). Import files are available; no actual external library adoption or search ranking improvement is established. Bibliography source: writing/bibliography.json.
