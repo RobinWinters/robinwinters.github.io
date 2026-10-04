@@ -41,3 +41,7 @@ The HTML editions expose Dublin Core metadata following [Zotero documentation](h
 Role-focused Word files: [iOS](https://robinwinters.github.io/resumes/ios.docx), [Forward Deployed Engineer target](https://robinwinters.github.io/resumes/forward-deployed.docx), [fitness technology](https://robinwinters.github.io/resumes/fitness-tech.docx). These reproduce the corresponding text variants; no particular ATS parsing or application submission is established.
 
 Public feed delivery: [canonical topics and push-update instructions](writing/feed-delivery.md).
+
+## Author discovery - October 4, 2026
+
+The separate public reference and writing index advertise confirmed identity links through `rel="me"` and footer h-card attributes. The writing index Person record uses the same approved profile URLs as the professional record. These are self-declared connections, not independent verification or a promise of crawler extraction. The external RSS Amplifier directory has read all thirteen source entries with their original links and Robin Winters bylines; its JSON Feed also inserts a clearly marked sponsored item, excluded from the writing count. https://rssamplifier.com/robin-winters-technical-writing
