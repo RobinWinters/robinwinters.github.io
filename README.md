@@ -16,7 +16,7 @@ Seven articles are republished with original text, source links, dates, captions
 
 ## Connected publishing accounts — October 3, 2026
 
-The confirmed Medium and Hashnode profiles appear in visible identity links, the professional record and Person sameAs metadata. The writing index links seven public Medium editions and six public Hashnode editions, with the AutoMod-archived Hashnode copy excluded. No robin.ac or LinkedIn edit is included.
+The confirmed Medium, Hashnode and DEV profiles appear in visible identity links and the professional reference. Twelve original writing/work-account sources have twelve Medium, nine Hashnode and twelve DEV editions; three archived Hashnode editions are excluded. The writing index retains original source attribution. Existing SwiftUI editions include two actual native simulator captures. No robin.ac or LinkedIn edit is included.
 
 ## Browsable Swift package documentation
 
