@@ -13,6 +13,29 @@
   ],
   "items": [
     {
+      "id": "https://robinwinters.github.io/writing/xclawd-duo-early-preview.html",
+      "url": "https://robinwinters.github.io/writing/xclawd-duo-early-preview.html",
+      "title": "Xclawd Duo: an early iPhone Duo IDE preview",
+      "content_html": "<p class=\"eyebrow\">EARLY DEVELOPMENT PREVIEW · OCTOBER 8, 2026</p><h1>Xclawd Duo: an early iPhone Duo IDE preview</h1><p class=\"lead\">I’m building Xclawd Duo, an AI-enabled IDE for iPhone Duo. This early preview explores a coding workspace that changes with the device: choose a project while folded, open it for chat and code, and use the keyboard in tabletop mode.</p><p>And yes, those are Mac OS X Aqua and Windows NT-inspired themes. A small coding workspace can still have some personality.</p><video controls playsinline preload=\"metadata\" poster=\"https://robinwinters.github.io/writing/images/xclawd-duo-early-preview-2026-10-08.jpg\" aria-label=\"Xclawd Duo early interface preview\" aria-describedby=\"preview-summary\" style=\"display:block;width:100%;max-height:72vh;object-fit:contain;background:#1d1d1d;border-radius:12px\"><source src=\"https://robinwinters.github.io/writing/media/xclawd-duo-early-preview-2026-10-08.mp4\" type=\"video/mp4\"><a href=\"https://robinwinters.github.io/writing/media/xclawd-duo-early-preview-2026-10-08.mp4\">Download the full MP4 preview</a></video><p><a href=\"https://robinwinters.github.io/writing/media/xclawd-duo-early-preview-2026-10-08.mp4\">Full 57-second MP4</a> · <a href=\"https://www.linkedin.com/feed/update/urn:li:activity:7513816884191043584/\">Original LinkedIn post</a></p><section id=\"preview-summary\"><h2>What the recording shows</h2><ul><li>A folded project picker with an “Open your Duo to continue” prompt.</li><li>Chat, Code and Changes views, with chat and the editor side by side in the wider layout.</li><li>An on-screen keyboard and coding punctuation controls in the tabletop-oriented editing view.</li><li>Appearance changes between Aqua, dark and Windows NT-inspired themes.</li></ul><p>This is an early, rough development build. The focus of this clip is the interface and device layouts; it is not a release announcement. The recording is silent.</p></section><h2>About the developer</h2><p>I’m Robin Winters, an iOS/Full Stack Engineer at ShowFlex. Alongside this early Xclawd work, I’ve shipped the ShowFlex iPhone product. <a href=\"https://apps.apple.com/us/app/showflex/id6757890910\">ShowFlex on the App Store</a> · <a href=\"https://robin.ac/\">Professional site</a>.</p><p class=\"note\">Adapted from my LinkedIn post with editorial assistance. The full recording is preserved in the web player; the cover image is a frame from the same video. <a href=\"https://robinwinters.github.io/writing/xclawd-duo-early-preview-media.json\">Media provenance</a>.</p>",
+      "date_published": "2026-10-08T23:15:31.652076+00:00",
+      "date_modified": "2026-10-08T23:15:31.652076+00:00",
+      "authors": [
+        {
+          "name": "Robin Winters",
+          "url": "https://robin.ac/"
+        }
+      ],
+      "attachments": [
+        {
+          "url": "https://robinwinters.github.io/writing/media/xclawd-duo-early-preview-2026-10-08.mp4",
+          "mime_type": "video/mp4",
+          "title": "Xclawd Duo: an early iPhone Duo IDE preview",
+          "size_in_bytes": 49381768,
+          "duration_in_seconds": 57.151666666666664
+        }
+      ]
+    },
+    {
       "id": "https://robinwinters.github.io/writing/swift-package-compatibility.html",
       "url": "https://robinwinters.github.io/writing/swift-package-compatibility.html",
       "title": "Verify a Swift package’s minimum toolchain and CLI contract",

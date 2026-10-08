@@ -1,0 +1,30 @@
+{
+  "project": "Xclawd Duo",
+  "status": "early development/interface preview",
+  "author": "Robin Winters",
+  "publishedOn": "2026-10-08",
+  "originalPost": "https://www.linkedin.com/feed/update/urn:li:activity:7513816884191043584/",
+  "sourceRecording": {
+    "providedBy": "Robin Winters",
+    "container": "QuickTime MOV",
+    "sha256": "8d20877604f4accf9ab7cc46cf81a74baa9f891dd3c11a796e3745478434f91a",
+    "bytes": 49382063,
+    "durationSeconds": 57.151666666666664,
+    "width": 2012,
+    "height": 1798,
+    "audioTracks": 0
+  },
+  "publicVideo": {
+    "url": "https://robinwinters.github.io/writing/media/xclawd-duo-early-preview-2026-10-08.mp4",
+    "sha256": "0e98b49ba4cf7a202b2b87bdd9275384d7fb8c4a52642ec2d4f5de21edef682a",
+    "bytes": 49381768,
+    "durationSeconds": 57.151666666666664,
+    "processing": "AVFoundation passthrough remux to MP4; network optimization; container metadata cleared. No timeline cuts, overlays, new audio or generated artwork. Full video-track duration preserved."
+  },
+  "poster": {
+    "url": "https://robinwinters.github.io/writing/images/xclawd-duo-early-preview-2026-10-08.jpg",
+    "source": "Frame extracted from the supplied recording at 28 seconds",
+    "sha256": "d7eb4828dc0a31b8d24875b4675ee07add229abdfcf4524facfbbb44a953a5d3"
+  },
+  "scope": "The original post describes an early rough version and intended App Store submission. This preview does not establish App Store availability or a completed AI coding task. The recording includes an early-build connection setup message."
+}

@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://robinwinters.github.io/sitemap.xml
+
+Sitemap: https://robinwinters.github.io/video-sitemap.xml
