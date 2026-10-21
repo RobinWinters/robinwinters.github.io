@@ -1,6 +1,6 @@
 {
   "name": "Robin Winters public HTML reference",
-  "factApproval": "Supported work facts approved October 2, 2026; PBC attribution and wording, TORos contribution, NASM-CPT and exact title NASM Certified Nutritionist confirmed by Robin October 3, 2026. Robin instructed inclusion now, with individual verification links to follow. Unresolved academic qualifications, credential dates and expiry are omitted.",
+  "factApproval": "Work titles, dates, responsibilities and education aligned to Robin’s updated LinkedIn profile at Robin’s request on October 21, 2026. NASM qualifications and prototype boundaries retain prior direct confirmations; individual CPT/nutrition verification links and dates remain unresolved.",
   "sourceRecord": "https://github.com/RobinWinters/RobinWinters/blob/Radpository/professional/professional-record.json",
   "sourceCommit": "7041dc02614de584a9f1a7aabbdc648ecb8d7559",
   "authorship": "Self-authored professional reference with editorial/coding-assistant support",
@@ -26,5 +26,76 @@
   ],
   "credentialEvidence": "https://credentials.nasm.org/1fbcae42-b595-4fc8-a1ad-ac09fdc542b4",
   "additionalCredentialEvidence": "NASM-CPT and exact title NASM Certified Nutritionist confirmed directly by Robin October 3, 2026; dates and individual issuer verification links to follow",
-  "nativeCaptureScope": "October 3, 2026: initial screen, one synthetic Strength search result and selection in iOS simulator. Remaining UI review and recording incomplete."
+  "nativeCaptureScope": "October 3, 2026: initial screen, one synthetic Strength search result and selection in iOS simulator. Remaining UI review and recording incomplete.",
+  "updatedLinkedIn": {
+    "source_url": "https://www.linkedin.com/in/robinwinters-sf/",
+    "checked": "2026-10-21",
+    "authority": "Robin requested alignment to this updated, self-authored LinkedIn profile; not independently verified employment or education.",
+    "headline": "iOS Engineer | Applied AI Systems",
+    "work": [
+      {
+        "organization": "ShowFlex Inc",
+        "title": "iOS Engineer",
+        "start": "2024-11",
+        "end": null,
+        "date_display": "Nov 2024–present",
+        "employment_type": "Full-time",
+        "responsibilities": [
+          "Architected and developed a design-forward consumer iOS application using Swift and SwiftUI.",
+          "Built a MapKit-based event discovery feature with advanced search and filtering capabilities.",
+          "Created ingestion pipelines to normalize global event calendars and athlete metadata into structured data.",
+          "Led cross-functional collaboration with engineering, product design, and external partners to ensure seamless delivery."
+        ]
+      },
+      {
+        "organization": "Yukon Systems",
+        "title": "iOS Engineer, AI Systems Engineer",
+        "start": "2023-03",
+        "end": "2025",
+        "date_display": "Mar 2023–2025",
+        "employment_type": "Contract",
+        "responsibilities": [
+          "Led technical prioritization and cross-functional delivery for AI-driven systems in high-reliability environments.",
+          "Translated research concepts into actionable software requirements and execution plans for iOS devices.",
+          "Collaborated with engineers on architecture decisions focusing on reliability, explainability, and performance."
+        ]
+      },
+      {
+        "organization": "Organic Alkaloids",
+        "title": "iOS Developer",
+        "start": "2017-07",
+        "end": "2023-02",
+        "date_display": "Jul 2017–Feb 2023",
+        "employment_type": "Full-time",
+        "responsibilities": [
+          "Developed and maintained operational workflows for iOS devices to streamline overseas sourcing and vendor coordination.",
+          "Managed logistics and shipment planning to enhance customer delivery processes.",
+          "Fostered strong client relationships through effective communication and marketing strategies."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "The University of North Carolina at Chapel Hill",
+        "qualification": "Bachelor of Arts",
+        "field": "Communications",
+        "kind": "Degree"
+      },
+      {
+        "institution": "Founder Institute",
+        "qualification": "Launch Track",
+        "field": "Startup Accelerator",
+        "kind": "Startup accelerator program",
+        "start": "2025-10",
+        "end": "2026-02",
+        "status": "Graduate"
+      },
+      {
+        "institution": "Le Cordon Bleu",
+        "qualification": "Grand Diplôme",
+        "kind": "Diploma"
+      }
+    ],
+    "date_policy": "Preserve displayed precision. Yukon end month and UNC/Le Cordon Bleu dates are not supplied and are omitted."
+  }
 }

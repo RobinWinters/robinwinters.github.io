@@ -2,7 +2,7 @@
 
 Static HTML for a professional reference and technical writing under the existing GitHub account. It is separate from robin.ac and does not alter that site's appearance or interactions. Professional references and article bodies are visible in initial HTML, without trackers, forms or external fonts. The separately hosted DocC documentation uses Apple’s generated JavaScript viewer.
 
-The work record uses approved held titles, year-level dates, scoped responsibilities and project evidence. Academic qualifications remain unresolved and omitted. The approved NASM Physique and Bodybuilding Coach credential is linked to its issuer record. Forward Deployed Engineer is a target role. Educational code/articles have coding-assistant support disclosed and remain distinct from private ShowFlex code or customer deployments.
+The work record uses approved held titles, year-level dates, scoped responsibilities and project evidence. Education follows the updated LinkedIn profile, reviewed October 21, 2026. The approved NASM Physique and Bodybuilding Coach credential is linked to its issuer record. Forward Deployed Engineer is a target role. Educational code/articles have coding-assistant support disclosed and remain distinct from private ShowFlex code or customer deployments.
 
 Source: [approved professional record](https://github.com/RobinWinters/RobinWinters/tree/Radpository/professional). The HTML writing editions link to public code and reflect the existing Markdown accounts. Article and Person structured data describe the visible pages; they are not hidden resume stuffing or instructions to models.
 
